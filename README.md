@@ -1,15 +1,10 @@
-# C++ Project with Number and Vector Libraries
+# Matrix Multiplication Lab (Linux/WSL Version)
 
-Проект содержит две библиотеки:
-- **Number** - класс для работы с числами
-- **Vector** - класс для работы с векторами
+Лабораторная работа по умножению матриц с использованием многопоточности в Linux/WSL.
 
-## Структура проекта
-- `staticlib/` - статическая библиотека Number
-- `dynamiclib/` - динамическая библиотека Vector  
-- `mainprogram/` - тестовая программа
+## Компиляция и запуск
 
-## Компиляция
 ```bash
 make
-./myprogram
+./matrix_lab
+

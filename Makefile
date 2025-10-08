@@ -1,11 +1,16 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Istaticlib -Idynamiclib
-TARGET = myprogram
+CXXFLAGS = -std=c++11 -pthread -Wall
+TARGET = matrix_lab
+SOURCES = matrix_functions.cpp main.cpp
 
-$(TARGET): mainprogram/main.cpp staticlib/Number.cpp dynamiclib/Vector.cpp
-	$(CXX) $(CXXFLAGS) -o $(TARGET) mainprogram/main.cpp staticlib/Number.cpp dynamiclib/Vector.cpp
+$(TARGET): $(SOURCES)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES)
 
 clean:
 	rm -f $(TARGET)
 
-.PHONY: clean
+run: $(TARGET)
+	./$(TARGET)
+
+.PHONY: clean run
+
